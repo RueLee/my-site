@@ -1,9 +1,9 @@
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
+  // SheetDescription,
+  // SheetHeader,
+  // SheetTitle,
   SheetTrigger,
 } from "@/app/components/ui/sheet"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"

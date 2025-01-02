@@ -1,9 +1,9 @@
-import RSS from "rss"
+// import RSS from "rss"
 
 export async function GET() {
-  return new Response('<Feed>', {
+  return new Response("<Feed>", {
     headers: {
-      'Content-Type': 'application/atom+xml; charset=utf-8',
+      "Content-Type": "application/atom+xml; charset=utf-8",
     },
   });
 }
