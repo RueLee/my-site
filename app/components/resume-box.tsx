@@ -5,6 +5,10 @@ import Link from "next/link"
 
 const li_className = "bg-gray-200 dark:bg-gray-950 p-8 my-8 rounded-xl border-l-4 border-black dark:border-white bg-gradient-to-r from-gray-400 dark:from-gray-700 via-transparent"
 
+interface DescriptionItem {
+  id: number;
+  comment: string;
+}
 
 function DefaultFormat({ src="", alt, name, role, yearspan, location="" }: { src?:string, alt:string, name:string, role:string, yearspan:string, location?:string }) {
   return (
@@ -27,7 +31,7 @@ export function DegreeBox({ src="", alt="", name, degree, yearspan, location="" 
   );
 }
 
-export function ExperienceBox({ src="", alt="", name, role, yearspan, location="", descarray, sourcecode="" }: { src?:string, alt?:string, name:string, role:string, yearspan:string, location?:string, descarray:Array<any>, sourcecode?:string }) {
+export function ExperienceBox({ src="", alt="", name, role, yearspan, location="", descarray, sourcecode="" }: { src?:string, alt?:string, name:string, role:string, yearspan:string, location?:string, descarray:Array<DescriptionItem>, sourcecode?:string }) {
   return (
     <li className={li_className}>
       <DefaultFormat src={src} alt={alt} name={name} role={role} yearspan={yearspan} location={location} />

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faYoutube, faTwitch, faXTwitter, faDiscord, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const SocialLinks = () => {
-  var cssIconMargin = "mx-2";
+  const cssIconMargin = "mx-2";
   return (
     <div className="flex flex-col mr-8">
       <p className="text-center">Socials</p>

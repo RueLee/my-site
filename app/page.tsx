@@ -49,8 +49,8 @@ export default function Page() {
       </section>
       <section>
         <div className="container bg-gradient-to-r from-blue-500 to-gray-200 dark:from-blue-950 dark:to-gray-950 border-x-4 border-black dark:border-white rounded-xl mb-12">
-          <h1 className="text-5xl font-bold mb-8 text-center">Let's Connect</h1>
-          <p className="text-center m-4">Feel free to reach me out on email (Sorry, I don't accept response by phone)! I am open for questions and opportunities!</p>
+          <h1 className="text-5xl font-bold mb-8 text-center">Let&apos;s Connect</h1>
+          <p className="text-center m-4">Feel free to reach me out on email! I am open for questions and opportunities!</p>
 
           <div className="flex justify-center">
             <Link href="mailto:ruleonl@uci.edu" className="transition ease-in-out duration-200 bg-cyan-200 dark:bg-cyan-950 hover:bg-cyan-500 dark:hover:bg-cyan-800 p-4 rounded-full">
