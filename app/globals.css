@@ -19,10 +19,6 @@ body {
   margin-right: 20px;
 }
 
-.footer-text-url {
-  text-decoration-line: underline;
-}
-
 /* page.tsx */
 
 .container {
@@ -59,11 +55,6 @@ body {
 
 .link-hover:hover {
   text-decoration: underline;
-}
-
-.footer-text {
-  display: flex;
-  justify-content: center;
 }
 
 @layer base {

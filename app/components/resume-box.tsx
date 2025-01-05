@@ -94,6 +94,7 @@ export function SkillBox() {
           <li>NextJS</li>
           <li>DJango</li>
           <li>Tailwind CSS</li>
+          <li>ShadCN</li>
         </ul>
       </div>
       <br></br>
