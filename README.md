@@ -1,7 +1,7 @@
 # Ruleon's Website
 Welcome! You are now viewing an open-source project via GitHub on my website.
 
-The site was developed from scratch and continued my path to more appealing and robustness enough to journey my goal from launch. The purpose primarily showcases on the development of one's self and achievement, and couple quality of life tools.
+The site was developed from scratch and continued my path to more appealing and robust enough to journey my goal from launch. The purpose primarily showcases on the development of one's self and achievement, and couple quality of life tools.
 
 Contributions and feedbacks are welcome!
 # Web Architecture
