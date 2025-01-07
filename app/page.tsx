@@ -9,7 +9,7 @@ export default function Page() {
 
   return (
     <div id="home-page">
-      <section>
+      <section aria-label="Welcome display">
         <div className="container">
           <div className="flex flex-row justify-between">
             <div className="flex flex-col">
@@ -30,24 +30,24 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section>
+      <section aria-label="Latest Post Blog">
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Latest Posts</h1>
           <ul>
           {allPostsData.map((post) => (
             <li key={post.slug} className="bg-gray-300 dark:bg-gray-900 rounded-xl p-8">
-              <Link href={`/posts/${post.slug}`} className="font-bold text-2xl mx-12 hover:underline">{post.metadata.title}</Link>
-              <p className="text-gray-500 mx-12">{post.metadata.date}&emsp;○&emsp;{post.metadata.author}</p>
+              <Link href={`/posts/${post.slug}`} className="font-bold text-2xl mx-4 hover:underline">{post.metadata.title}</Link>
+              <p className="text-gray-500 mx-4">{post.metadata.date}&emsp;○&emsp;{post.metadata.author}</p>
               <br></br>
-              <hr className="mx-12"></hr>
+              <hr className="mx-4"></hr>
               <br></br>
-              <p className="mx-12">{post.metadata.excerpt}</p>
+              <p className="mx-4">{post.metadata.excerpt}</p>
             </li>
           ))}
           </ul>
         </div>
       </section>
-      <section>
+      <section aria-label="Email Contact">
         <div className="container bg-gradient-to-r from-blue-500 to-gray-200 dark:from-blue-950 dark:to-gray-950 border-x-4 border-black dark:border-white rounded-xl mb-12">
           <h1 className="text-5xl font-bold mb-8 text-center">Let&apos;s Connect</h1>
           <p className="text-center m-4">Feel free to reach me out on email! I am open for questions and opportunities!</p>

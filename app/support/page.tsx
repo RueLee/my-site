@@ -3,7 +3,7 @@ import { StreamElementDonateButton, PayPalDonateButton } from "../components/cus
 export default function SupportPage() {
   return (
     <div id="support-page">
-      <section>
+      <section aria-label="Support">
         <div className="container">
           <StreamElementDonateButton />
           <PayPalDonateButton />

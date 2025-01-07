@@ -17,7 +17,7 @@ const exp_description1: DescriptionItem[] = [
 export default function ResumePage() {
   return (
     <div id="resume-page">
-      <section>
+      <section aria-label="Printable Resume">
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Printable Resume</h1>
           <div className="flex justify-center">
@@ -26,7 +26,7 @@ export default function ResumePage() {
           <p className="text-base mt-4 text-center">For DETAILED information/activity, refer to my <Link href="https://www.linkedin.com/in/ruleon-lee/" target="_blank" className="link-hover">LinkedIn</Link> page.</p>
         </div>
       </section>
-      <section>
+      <section aria-label="Education">
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Education</h1>
           <ul>
@@ -34,7 +34,7 @@ export default function ResumePage() {
           </ul>
         </div>
       </section>
-      <section>
+      <section aria-label="Experience">
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Experience</h1>
           <ul>
@@ -42,7 +42,7 @@ export default function ResumePage() {
           </ul>
         </div>
       </section>
-      <section>
+      <section aria-label="Certification">
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Certification</h1>
           <ul>
@@ -51,13 +51,13 @@ export default function ResumePage() {
           </ul>
         </div>
       </section>
-      <section>
+      <section aria-label="Skill">
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Skill</h1>
           <SkillBox />
         </div>
       </section>
-      <section>
+      <section aria-label="Award">
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Award</h1>
           <ul>

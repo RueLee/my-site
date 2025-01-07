@@ -29,20 +29,20 @@ function Peripherals({ src, alt, productname, storeurl }: { src:string, alt:stri
 export default function TwitchPage() {
   return (
     <div id="twitch-page">
-      <section>
+      <section aria-label="Twitch Page Description">
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Streaming</h1>
           <p className="text-xl text-center">I enjoy streaming! I mainly play games and occassionally some other stuffs during live. Feel free to tune in! :)</p>
         </div>
       </section>
-      <section>
+      <section aria-label="Twitch embed display">
         <div className="container">
           <TwitchEmbedComponent channel="rueleerj" />
           <StreamElementDonateButton />
           <p className="italic text-center tracking-wide mt-4">PLEASE NOTE that donations are FINAL AND NON-REFUNDABLE!!!</p>
         </div>
       </section>
-      <section>
+      <section aria-label="PC Spectacles and Peripherals Section">
         <div className="container">
           <div className="flex flex-wrap">
             <div className="col-box-50 col-box-100">
