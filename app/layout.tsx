@@ -13,15 +13,9 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
-
-// const NavLinks = [
-//   { name: "Resume", href: "/resume" },
-//   { name: "Other", href: "/other" }
-// ]
-
 export const metadata: Metadata = {
   title: "Ruleon Ki Lee",
-  description: "Welcome to my site!",
+  description: "Current UC Irvine Student and Computer Science enthusiast",
 };
 
 export default function RootLayout({

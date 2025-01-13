@@ -45,8 +45,8 @@ export default function TwitchPage() {
       <section aria-label="PC Spectacles and Peripherals Section">
         <div className="container">
           <div className="flex flex-wrap">
-            <div className="col-box-50 col-box-100">
-              <h1 className="text-4xl font-bold mb-8 text-center">Current PC Spectacles</h1>
+            <div className="col-box-50">
+              <h1 className="text-4xl font-bold my-8 text-center">Current PC Spectacles</h1>
               <ul>
                 {/* Image Sources: https://icons8.com/icons/authors/klDPcgJ2LxJD/febrian-hidayat/external-febrian-hidayat-outline-color-febrian-hidayat/external-pc-gaming-febrian-hidayat-outline-color-febrian-hidayat */}
                 <PCSpectacles
@@ -81,8 +81,8 @@ export default function TwitchPage() {
                 />
               </ul>
             </div>
-            <div className="col-box-50 col-box-100">
-              <h1 className="text-4xl font-bold mb-8 text-center">Current Peripherals</h1>
+            <div className="col-box-50">
+              <h1 className="text-4xl font-bold my-8 text-center">Current Peripherals</h1>
               <ul>
                 <Peripherals
                   src="https://img.icons8.com/external-febrian-hidayat-outline-color-febrian-hidayat/100/external-Monitor-pc-gaming-febrian-hidayat-outline-color-febrian-hidayat.png"
