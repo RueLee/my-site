@@ -85,6 +85,7 @@ export function SkillBox() {
           <li>Keras</li>
           <li>Scikit Learn</li>
           <li>Pandas</li>
+          <li>PyTorch</li>
         </ul>
       </div>
       <br></br>
@@ -92,7 +93,7 @@ export function SkillBox() {
         <h1 className="font-bold text-2xl">Framework</h1>
         <ul className="list-disc pl-4">
           <li>NextJS</li>
-          <li>DJango</li>
+          <li>Django</li>
           <li>Tailwind CSS</li>
           <li>ShadCN</li>
         </ul>
@@ -102,11 +103,12 @@ export function SkillBox() {
         <h1 className="font-bold text-2xl">Tools</h1>
         <ul className="list-disc pl-4">
           <li>PyCharm</li>
+          <li>Eclipse</li>
           <li>Visual Studio Code</li>
           <li>Vim</li>
           <li>GitHub</li>
           <li>Amazon Web Services (AWS)</li>
-          <li>Eclipse</li>
+          <li>Cloudflare</li>
         </ul>
       </div>
     </div>
