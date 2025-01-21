@@ -11,4 +11,4 @@ Contributions and feedbacks are welcome!
 
 Most of the codebases are written in Typescript.
 # Bug Report
-If you think you have found any problems regarding my website, please use the "Issues" tab.
+If you think you have found any problems regarding my website, please use the GitHub's "Issues" tab.
