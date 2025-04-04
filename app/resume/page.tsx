@@ -9,9 +9,9 @@ interface DescriptionItem {
 }
 
 const exp_description1: DescriptionItem[] = [
-  { id: 1, comment: "Developed a Python GUI application to automate the manual invoicing process by directly parsing class names, hours, rates, and amounts for students and teachers from Google Calendar events into Microsoft Excel, greatly improving the working routine." },
-  { id: 2, comment: "Hosted database on Amazon Web Services using MySQL engine to store and manage clients' invoice data and to connect multiple devices into a single machine."},
-  { id: 3, comment: "Collaborated with the Quality Assurance team to and gather feedback from end users for quality improvements." }
+  { id: 1, comment: "Developed a Python GUI application to reduce the manual invoicing process from 2-3 days to less than a few hours" },
+  { id: 2, comment: "Launched database on Amazon Web Services using MySQL engine that holds student information regarding names, tuitions, and discounts, consistently managing clients’ invoice data"},
+  { id: 3, comment: "Collaborated with the Quality Assurance team to gather feedback from end users for quality improvements" }
 ]
 
 export default function ResumePage() {

@@ -100,15 +100,11 @@ export function SkillBox() {
       </div>
       <br></br>
       <div className="ml-4">
-        <h1 className="font-bold text-2xl">Tools</h1>
+        <h1 className="font-bold text-2xl">Developer Tools</h1>
         <ul className="list-disc pl-4">
-          <li>PyCharm</li>
-          <li>Eclipse</li>
-          <li>Visual Studio Code</li>
-          <li>Vim</li>
-          <li>GitHub</li>
           <li>Amazon Web Services (AWS)</li>
           <li>Cloudflare</li>
+          <li>GitHub</li>
         </ul>
       </div>
     </div>
