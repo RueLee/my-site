@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { ResumePDFButton } from "../components/custom-button"
-import { DegreeBox, ExperienceBox, CertificateBox, SkillBox, AwardBox } from "../components/resume-box";
+import { DegreeBox, ExperienceBox, ProjectBox, CertificateBox, SkillBox, AwardBox } from "../components/resume-box";
 
 interface DescriptionItem {
   id: number;
@@ -12,6 +12,11 @@ const exp_description1: DescriptionItem[] = [
   { id: 1, comment: "Developed a Python GUI application to reduce the manual invoicing process from 2-3 days to less than a few hours" },
   { id: 2, comment: "Launched database on Amazon Web Services using MySQL engine that holds student information regarding names, tuitions, and discounts, consistently managing clients’ invoice data"},
   { id: 3, comment: "Collaborated with the Quality Assurance team to gather feedback from end users for quality improvements" }
+]
+
+const proj_description1: DescriptionItem[] = [
+  { id: 1, comment: "Lead the project with a team of 2 to brainstorm efficient strategies against other AI"},
+  { id: 2, comment: "Revised algorithm for prominent approach, increasing our win rate from 1:3 by 40% with over 20 played games"}
 ]
 
 export default function ResumePage() {
@@ -30,7 +35,7 @@ export default function ResumePage() {
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Education</h1>
           <ul>
-            <DegreeBox src="/University_of_California,_Irvine_seal.svg.png" alt="UCI Logo Seal" name="University of California, Irvine" degree="Bachelor of Science, Computer Science" yearspan="Sep 2021 - Dec 2025" location="Irvine, CA" />
+            <DegreeBox src="/University_of_California,_Irvine_seal.svg.png" alt="UCI Logo Seal" name="University of California, Irvine" degree="Bachelor of Science, Computer Science" startyear={2021} endyear={2025} location="Irvine, CA" />
           </ul>
         </div>
       </section>
@@ -38,7 +43,15 @@ export default function ResumePage() {
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Experience</h1>
           <ul>
-            <ExperienceBox src="/gw1.jpg" alt="Boston Edu Logo" name="Boston Education" role="Software Dev Contractor" yearspan="Dec 2023 - Present" location="Los Angeles, CA" descarray={exp_description1} sourcecode="https://github.com/Boston-Education/bosvoiceton-gui" />
+            <ExperienceBox src="/gw1.jpg" alt="Boston Edu Logo" name="Boston Education" role="Software Dev Contractor" startdate="Dec 2023" enddate="Present" location="Los Angeles, CA" descarray={exp_description1} sourcecode="https://github.com/Boston-Education/bosvoiceton-gui" />
+          </ul>
+        </div>
+      </section>
+      <section aria-label="Project">
+        <div className="container">
+          <h1 className="text-4xl font-bold mb-8 text-center">Project</h1>
+          <ul>
+            <ProjectBox name="Checkers AI" role="Project Leader" startdate="Feb 2025" enddate="Mar 2025" descarray={proj_description1} />
           </ul>
         </div>
       </section>

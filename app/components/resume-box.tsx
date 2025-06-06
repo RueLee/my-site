@@ -10,37 +10,51 @@ interface DescriptionItem {
   comment: string;
 }
 
-function DefaultFormat({ src="", alt, name, role, yearspan, location="" }: { src?:string, alt:string, name:string, role:string, yearspan:string, location?:string }) {
+function DefaultFormat({ src="", alt, name, role, startdate, enddate="", location="" }: { src?:string, alt:string, name:string, role:string, startdate:any, enddate?:any, location?:string }) {
   return (
     <div className="inline-flex flex-row">
       { src != "" ? <Image src={src} alt={alt} width={80} height={80} className="rounded object-contain" /> : null }
       <div className="ml-8">
         <h1 className="font-bold text-2xl">{name}</h1>
         <p className="font-bold">{role}</p>
-        { location != "" ? <p>{location}&emsp;•&emsp;{yearspan}</p> : <p>Issued on {yearspan}</p> }
+        { location != "" ? <p>{location}&emsp;•&emsp;{`${startdate} - ${enddate}`}</p> : enddate != "" ? <p>{`${startdate} - ${enddate}`}</p> : <p>Issued on {startdate}</p> }
       </div>
     </div>
   )
 }
 
-export function DegreeBox({ src="", alt="", name, degree, yearspan, location="" }: { src?:string, alt?:string, name:string, degree:string, yearspan:string, location?:string }) {
+export function DegreeBox({ src="", alt="", name, degree, startyear, endyear, location="" }: { src?:string, alt?:string, name:string, degree:string, startyear:number, endyear:number, location?:string }) {
   return (
     <li className={li_className}>
-      <DefaultFormat src={src} alt={alt} name={name} role={degree} yearspan={yearspan} location={location} />
+      <DefaultFormat src={src} alt={alt} name={name} role={degree} startdate={startyear} enddate={endyear} location={location} />
     </li>
   );
 }
 
-export function ExperienceBox({ src="", alt="", name, role, yearspan, location="", descarray, sourcecode="" }: { src?:string, alt?:string, name:string, role:string, yearspan:string, location?:string, descarray:Array<DescriptionItem>, sourcecode?:string }) {
+export function ExperienceBox({ src="", alt="", name, role, startdate, enddate="", location="", descarray, sourcecode="" }: { src?:string, alt?:string, name:string, role:string, startdate:string, enddate?:string, location?:string, descarray:Array<DescriptionItem>, sourcecode?:string }) {
   return (
     <li className={li_className}>
-      <DefaultFormat src={src} alt={alt} name={name} role={role} yearspan={yearspan} location={location} />
+      <DefaultFormat src={src} alt={alt} name={name} role={role} startdate={startdate} enddate={enddate} location={location} />
       <ul className="list-disc mx-12">
         {descarray.map((desc) => (
           <li key={desc.id}>{desc.comment}</li>
         ))}
       </ul>
-      { sourcecode != "" ? <p className="mt-4">You can view the <Link href={sourcecode} target="_blank" className="link-hover">Source Code</Link> here!</p> : null }
+      { sourcecode != "" ? <p className="mt-4">View <Link href={sourcecode} target="_blank" className="link-hover">Source Code</Link></p> : null }
+    </li>
+  )
+}
+
+export function ProjectBox({ src="", alt="", name, role, startdate, enddate="", location="", descarray, sourcecode="" }: { src?:string, alt?:string, name:string, role:string, startdate:string, enddate?:string, location?:string, descarray:Array<DescriptionItem>, sourcecode?:string }) {
+  return (
+    <li className={li_className}>
+      <DefaultFormat src={src} alt={alt} name={name} role={role} startdate={startdate} enddate={enddate} location={location} />
+      <ul className="list-disc mx-12">
+        {descarray.map((desc) => (
+          <li key={desc.id}>{desc.comment}</li>
+        ))}
+      </ul>
+      { sourcecode != "" ? <p className="mt-4">View <Link href={sourcecode} target="_blank" className="link-hover">Source Code</Link></p> : null }
     </li>
   )
 }
@@ -86,6 +100,7 @@ export function SkillBox() {
           <li>Scikit Learn</li>
           <li>Pandas</li>
           <li>PyTorch</li>
+          <li>Pyro</li>
         </ul>
       </div>
       <br></br>
@@ -104,7 +119,10 @@ export function SkillBox() {
         <ul className="list-disc pl-4">
           <li>Amazon Web Services (AWS)</li>
           <li>Cloudflare</li>
+          <li>Git</li>
           <li>GitHub</li>
+          <li>Vim</li>
+          <li>Ubuntu</li>
         </ul>
       </div>
     </div>
@@ -114,7 +132,7 @@ export function SkillBox() {
 export function AwardBox({ src="", alt="", name, organization, issuedate }: { src?:string, alt?:string, name:string, organization:string, issuedate:string }) {
   return (
     <li className={li_className}>
-      <DefaultFormat src={src} alt={alt} name={name} role={organization} yearspan={issuedate} />
+      <DefaultFormat src={src} alt={alt} name={name} role={organization} startdate={issuedate} />
     </li>
   )
 }
