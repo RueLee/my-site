@@ -10,7 +10,7 @@ interface DescriptionItem {
   comment: string;
 }
 
-function DefaultFormat({ src="", alt, name, role, startdate, enddate="", location="" }: { src?:string, alt:string, name:string, role:string, startdate:any, enddate?:any, location?:string }) {
+function DefaultFormat({ src="", alt, name, role, startdate, enddate="", location="" }: { src?:string, alt:string, name:string, role:string, startdate:string, enddate?:string, location?:string }) {
   return (
     <div className="inline-flex flex-row">
       { src != "" ? <Image src={src} alt={alt} width={80} height={80} className="rounded object-contain" /> : null }
@@ -23,10 +23,10 @@ function DefaultFormat({ src="", alt, name, role, startdate, enddate="", locatio
   )
 }
 
-export function DegreeBox({ src="", alt="", name, degree, startyear, endyear, location="" }: { src?:string, alt?:string, name:string, degree:string, startyear:number, endyear:number, location?:string }) {
+export function DegreeBox({ src="", alt="", name, degree, startdate, enddate, location="" }: { src?:string, alt?:string, name:string, degree:string, startdate:string, enddate:string, location?:string }) {
   return (
     <li className={li_className}>
-      <DefaultFormat src={src} alt={alt} name={name} role={degree} startdate={startyear} enddate={endyear} location={location} />
+      <DefaultFormat src={src} alt={alt} name={name} role={degree} startdate={startdate} enddate={enddate} location={location} />
     </li>
   );
 }

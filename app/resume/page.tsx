@@ -35,7 +35,7 @@ export default function ResumePage() {
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Education</h1>
           <ul>
-            <DegreeBox src="/University_of_California,_Irvine_seal.svg.png" alt="UCI Logo Seal" name="University of California, Irvine" degree="Bachelor of Science, Computer Science" startyear={2021} endyear={2025} location="Irvine, CA" />
+            <DegreeBox src="/University_of_California,_Irvine_seal.svg.png" alt="UCI Logo Seal" name="University of California, Irvine" degree="Bachelor of Science, Computer Science" startdate="Sep 2021" enddate="Dec 2025" location="Irvine, CA" />
           </ul>
         </div>
       </section>
