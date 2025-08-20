@@ -36,7 +36,7 @@ export default function RootLayout({
             <div className="flex flex-row items-center justify-between">
               <Link href="/">
                 <div className="flex flex-row items-center">
-                  <div className="relative w-16 h-16 overflow-hidden rounded-full">
+                  <div className="relative w-12 h-12 overflow-hidden rounded-full">
                     <Image
                       src="/20210626_141437.jpg"
                       alt="RueLee Profile Pic"

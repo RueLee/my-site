@@ -28,7 +28,7 @@ export default function ResumePage() {
           <div className="flex justify-center">
             <ResumePDFButton />
           </div>
-          <p className="text-base mt-4 text-center">For DETAILED information/activity, refer to my <Link href="https://www.linkedin.com/in/ruleon-lee/" target="_blank" className="link-hover">LinkedIn</Link> page.</p>
+          <p className="text-base mt-4 text-center">For FULL information, refer to my <Link href="https://www.linkedin.com/in/ruleon-lee/" target="_blank" className="link-hover">LinkedIn</Link> page.</p>
         </div>
       </section>
       <section aria-label="Education">
