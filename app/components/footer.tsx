@@ -6,7 +6,7 @@ export const Footer = () => {
       <p>Copyright © 2025 Ruleon (RueLee) Lee. All Rights Reserved.</p>
       <p>
         Made with&nbsp;
-        <Link href="https://nextjs.org/" target="_blank" className="underline">NextJS</Link>
+        <Link href="https://nextjs.org/" target="_blank" className="underline">Next.js</Link>
         ,&nbsp;
         <Link href="https://tailwindcss.com/" target="_blank" className="underline">Tailwind</Link>
         , and&nbsp;

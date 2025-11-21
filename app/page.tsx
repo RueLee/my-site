@@ -33,7 +33,7 @@ export default function Page() {
       <section aria-label="Latest Post Blog">
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Latest Posts</h1>
-          <ul>
+          <ul className="space-y-4">
           {allPostsData.map((post) => (
             <li key={post.slug} className="bg-gray-300 dark:bg-gray-900 rounded-xl p-8">
               <Link href={`/posts/${post.slug}`} className="font-bold text-2xl mx-4 hover:underline">{post.metadata.title}</Link>

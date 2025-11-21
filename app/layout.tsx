@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" suppressHydrationWarning className={inter.className}>
       <body className="flex flex-col min-h-screen">
         <ThemeProvider
           attribute="class"
@@ -40,8 +40,8 @@ export default function RootLayout({
                     <Image
                       src="/20210626_141437.jpg"
                       alt="RueLee Profile Pic"
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      style={{ objectFit: "cover" }}
                     />
                   </div>
                   <p className="text-[20px] ml-[20px]">Ruleon Lee</p>

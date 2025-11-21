@@ -107,7 +107,7 @@ export function SkillBox() {
       <div className="ml-4">
         <h1 className="font-bold text-2xl">Framework</h1>
         <ul className="list-disc pl-4">
-          <li>NextJS</li>
+          <li>Next.js</li>
           <li>Django</li>
           <li>Tailwind CSS</li>
           <li>ShadCN</li>
@@ -123,6 +123,7 @@ export function SkillBox() {
           <li>GitHub</li>
           <li>Vim</li>
           <li>Ubuntu</li>
+          <li>Arch Linux</li>
         </ul>
       </div>
     </div>
