@@ -1,8 +1,9 @@
 import { getApiPost, getAllApiPosts } from "@/lib/api";
+import { BlogPost } from "@/lib/struct";
 
 export async function generateStaticParams() {
   const posts = await getAllApiPosts();
-  return posts.map((post) => ({ slug: post.slug }));
+  return posts.map((post: BlogPost) => ({ slug: post.slug }));
 }
 
 export default async function BlogPostPage(props: { params: Promise<{ slug: string }> }) {
