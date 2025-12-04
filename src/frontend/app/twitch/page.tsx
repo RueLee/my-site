@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import TwitchEmbedComponent from "../components/twitch-embed"
+import { TwitchPlayer } from "../components/twitch-embed"
 import { StreamElementDonateButton } from "../components/custom-button"
 
 function PCSpectacles({ src, alt, productname, storeurl }: { src:string, alt:string, productname:string, storeurl:string }) {
@@ -37,7 +37,7 @@ export default function TwitchPage() {
       </section>
       <section aria-label="Twitch embed display">
         <div className="container">
-          <TwitchEmbedComponent channel="rueleerj" />
+          <TwitchPlayer channel="rueleerj" parent="ruleonlee.com" />
           <StreamElementDonateButton />
           <p className="italic text-center tracking-wide mt-4">PLEASE NOTE that donations are FINAL AND NON-REFUNDABLE!!!</p>
         </div>
