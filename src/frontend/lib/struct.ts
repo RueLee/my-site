@@ -1,4 +1,4 @@
-type BlogPost = {
+export type BlogPost = {
     title: string,
     author: string,
     date_posted: string,
