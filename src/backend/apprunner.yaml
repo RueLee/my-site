@@ -3,6 +3,8 @@ runtime: python3
 build:
   commands:
     build:
+      - pwd
+      - ls
       - pip install --upgrade pip
       - pip install -r requirements.txt
 run:
