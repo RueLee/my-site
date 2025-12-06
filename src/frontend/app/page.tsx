@@ -6,7 +6,13 @@ import { getAllApiPosts } from "@/lib/api";
 import { BlogPost } from "@/lib/struct";
 
 export default async function Page() {
-  const allPostsData = await getAllApiPosts();
+  let allPostsData = null;
+  try {
+    allPostsData = await getAllApiPosts();
+  }
+  catch (error) {
+    allPostsData = null;
+  }
 
   return (
     <div id="home-page">
@@ -34,18 +40,23 @@ export default async function Page() {
       <section aria-label="Latest Post Blog">
         <div className="container">
           <h1 className="text-4xl font-bold mb-8 text-center">Latest Posts</h1>
-          <ul className="space-y-4">
-          {allPostsData.map((post: BlogPost) => (
-            <li key={post.slug} className="bg-gray-300 dark:bg-gray-900 rounded-xl p-8">
-              <Link href={`/posts/${post.slug}`} className="font-bold text-2xl mx-4 hover:underline">{post.title}</Link>
-              <p className="text-gray-500 mx-4">{post.date_posted}&emsp;○&emsp;{post.author}</p>
-              <br></br>
-              <hr className="mx-4"></hr>
-              <br></br>
-              <p className="mx-4">{post.excerpt}</p>
-            </li>
-          ))}
-          </ul>
+
+          {allPostsData === null ? (
+            <p className="text-center text-red-500 text-xl">Failed to fetch data!</p>
+          ) : (
+            <ul className="space-y-4">
+            {allPostsData.map((post: BlogPost) => (
+              <li key={post.slug} className="bg-gray-300 dark:bg-gray-900 rounded-xl p-8">
+                <Link href={`/posts/${post.slug}`} className="font-bold text-2xl mx-4 hover:underline">{post.title}</Link>
+                <p className="text-gray-500 mx-4">{post.date_posted}&emsp;○&emsp;{post.author}</p>
+                <br></br>
+                <hr className="mx-4"></hr>
+                <br></br>
+                <p className="mx-4">{post.excerpt}</p>
+              </li>
+            ))}
+            </ul>
+          )}
         </div>
       </section>
       <section aria-label="Email Contact">
