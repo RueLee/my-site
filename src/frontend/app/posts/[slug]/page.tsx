@@ -2,7 +2,13 @@ import { getApiPost, getAllApiPosts } from "@/lib/api";
 import { BlogPost } from "@/lib/struct";
 
 export async function generateStaticParams() {
-  const posts = await getAllApiPosts();
+  let posts = null;
+  try {
+    posts = await getAllApiPosts();
+  }
+  catch (error) {
+    return [];
+  }
   return posts.map((post: BlogPost) => ({ slug: post.slug }));
 }
 
