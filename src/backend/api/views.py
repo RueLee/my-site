@@ -9,3 +9,6 @@ class BlogPostViewSet(viewsets.ModelViewSet):
     serializer_class = BlogPostSerializer
     permission_classes = [DjangoModelPermissionsOrAnonReadOnly]
     lookup_field = "slug"
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)

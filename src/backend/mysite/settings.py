@@ -28,6 +28,10 @@ DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = ['.ruleonlee.com']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.ruleonlee.com',
+]
+
 
 # Application definition
 
