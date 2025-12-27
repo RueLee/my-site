@@ -37,7 +37,7 @@ export default function TwitchPage() {
       </section>
       <section aria-label="Twitch embed display">
         <div className="container">
-          <TwitchPlayer channel="rueleerj" parent="ruleonlee.com" />
+          <TwitchPlayer channel="rueleerj" parent="www.ruleonlee.com" />
           <StreamElementDonateButton />
           <p className="italic text-center tracking-wide mt-4">PLEASE NOTE that donations are FINAL AND NON-REFUNDABLE!!!</p>
         </div>
