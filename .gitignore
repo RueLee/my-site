@@ -1,0 +1,4 @@
+/src/frontend/.next/
+/src/frontend/node_modules/
+/src/backend/.env
+/src/backend/db.sqlite3
