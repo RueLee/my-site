@@ -11,4 +11,4 @@ class BlogPostViewSet(viewsets.ModelViewSet):
     lookup_field = "slug"
 
     def perform_create(self, serializer):
-        serializer.save(self.request.user)
+        serializer.save(author=self.request.user)
