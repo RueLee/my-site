@@ -25,7 +25,7 @@ export default async function Page() {
             </div>
             <div className="hero-heading-right">
               <Image
-                src="/sollycommission.jpg"
+                src="/images/sollycommission.jpg"
                 alt="RueLee Profile Pic"
                 width={180}
                 height={180}

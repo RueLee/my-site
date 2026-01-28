@@ -13,7 +13,7 @@ interface DescriptionItem {
 function DefaultFormat({ src="", alt, name, role, startdate, enddate="", location="" }: { src?:string, alt:string, name:string, role:string, startdate:string, enddate?:string, location?:string }) {
   return (
     <div className="inline-flex flex-row">
-      { src != "" ? <Image src={src} alt={alt} width={80} height={80} className="rounded object-contain" /> : null }
+      { src != "" ? <Image src={src} alt={alt} width={80} height={80} className="object-contain" /> : null }
       <div className="ml-8">
         <h1 className="font-bold text-2xl">{name}</h1>
         <p className="font-bold">{role}</p>
@@ -63,7 +63,7 @@ export function CertificateBox({ src="", alt="", name, organization, issuedate, 
   return (
     <li className={li_className}>
       <div className="inline-flex flex-row">
-        <Image src={src} alt={alt} width={80} height={80} className="rounded object-contain" />
+        <Image src={src} alt={alt} width={80} height={80} className="object-contain" />
         <div className="ml-8">
           <h1 className="font-bold text-2xl">{name}</h1>
           <p className="font-bold">{organization}</p>
@@ -82,7 +82,7 @@ export function SkillBox() {
         <h1 className="font-bold text-2xl">Programming Language</h1>
         <ul className="list-disc pl-4">
           <li>Python</li>
-          <li>C++</li>
+          <li>C/C++</li>
           <li>Java</li>
           <li>MySQL</li>
           <li>HTML</li>

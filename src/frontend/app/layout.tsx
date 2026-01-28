@@ -34,18 +34,16 @@ export default function RootLayout({
         >
           <header aria-label="Header Label" className={`${lemonmilk.className} p-4`}>
             <div className="flex flex-row items-center justify-between">
-              <Link href="/">
-                <div className="flex flex-row items-center">
-                  <div className="relative w-12 h-12 overflow-hidden rounded-full">
-                    <Image
-                      src="/20210626_141437.jpg"
-                      alt="RueLee Profile Pic"
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
-                  </div>
-                  <p className="text-[20px] ml-[20px]">Ruleon Lee</p>
+              <Link href="/" className="flex flex-row items-center">
+                <div className="relative w-12 h-12 overflow-hidden rounded-full">
+                  <Image
+                    src="/images/20210626_141437.jpg"
+                    alt="RueLee Profile Pic"
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
+                <p className="text-[20px] ml-[20px]">Ruleon Lee</p>
               </Link>
               <div className="flex items-center">
                 <DesktopNav />
