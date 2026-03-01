@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image"
 import Link from "next/link"
 import { inter, lemonmilk } from "./components/fonts"
@@ -13,16 +12,12 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Ruleon Ki Lee",
   description: "Current UC Irvine Student and Computer Science Enthusiast",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.className}>
       <body className="flex flex-col min-h-screen">

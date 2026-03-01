@@ -3,18 +3,13 @@ import Link from "next/link";
 import { ResumePDFButton } from "../components/custom-button"
 import { DegreeBox, ExperienceBox, ProjectBox, CertificateBox, SkillBox, AwardBox } from "../components/resume-box";
 
-interface DescriptionItem {
-  id: number;
-  comment: string;
-}
-
-const exp_description1: DescriptionItem[] = [
+const exp_description1 = [
   { id: 1, comment: "Developed a Python GUI application to reduce the manual invoicing process from 2-3 days to less than a few hours" },
   { id: 2, comment: "Launched database on Amazon Web Services using MySQL engine that holds student information regarding names, tuitions, and discounts, consistently managing clients’ invoice data"},
   { id: 3, comment: "Collaborated with the Quality Assurance team to gather feedback from end users for quality improvements" }
 ]
 
-const proj_description1: DescriptionItem[] = [
+const proj_description1 = [
   { id: 1, comment: "Lead the project with a team of 2 to brainstorm efficient strategies against other AI"},
   { id: 2, comment: "Revised algorithm for prominent approach, increasing our win rate from 1:3 by 40% with over 20 played games"}
 ]

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopesBulk } from "@fortawesome/free-solid-svg-icons";
 import { getAllApiPosts } from "@/lib/api";
-import { BlogPost } from "@/lib/struct";
 
 export default async function Page() {
   let allPostsData = null;
@@ -45,7 +44,7 @@ export default async function Page() {
             <p className="text-center text-red-500 text-xl">Failed to fetch data!</p>
           ) : (
             <ul className="space-y-4">
-            {allPostsData.map((post: BlogPost) => (
+            {allPostsData.map((post) => (
               <li key={post.slug} className="bg-gray-300 dark:bg-gray-900 rounded-xl p-8">
                 <Link href={`/posts/${post.slug}`} className="font-bold text-2xl mx-4 hover:underline">{post.title}</Link>
                 <p className="text-gray-500 mx-4">{post.date_posted}&emsp;○&emsp;{post.author}</p>
