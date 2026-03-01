@@ -5,13 +5,13 @@ The site was developed starting from scratch and continued designing and testing
 
 Contributions and feedbacks are welcome!
 # Web Architecture
-- [NextJS](https://nextjs.org/): Main web framework for frontend work
+- [NextJS](https://nextjs.org/): Main web framework for handling frontend
 - [Tailwind](https://tailwindcss.com/): CSS styling plugin
 - [ShadCN](https://ui.shadcn.com/): Alternative UI components
 
 **Backend:**
 - [Django](https://www.djangoproject.com/): Main framework for handling backend
 
-Most of the codebases are written in Typescript. However, backend service runs on Python.
+Most of the codebases are written in Javascript. However, the backend runs on Python.
 # Bug Report
 If you think you have found any problems regarding my website, please use the GitHub's "Issues" tab.
