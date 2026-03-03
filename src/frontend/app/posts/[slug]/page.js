@@ -1,5 +1,4 @@
 import { getApiPost, getAllApiPosts } from "@/lib/api";
-import { BlogPost } from "@/lib/struct";
 
 export async function generateStaticParams() {
   let posts = null;
@@ -9,10 +8,10 @@ export async function generateStaticParams() {
   catch (error) {
     return [];
   }
-  return posts.map((post: BlogPost) => ({ slug: post.slug }));
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
-export default async function BlogPostPage(props: { params: Promise<{ slug: string }> }) {
+export default async function BlogPostPage(props) {
   const params = await props.params;
   const post = await getApiPost(params.slug);
 

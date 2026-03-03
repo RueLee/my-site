@@ -24,19 +24,12 @@
 
 // export default TwitchPlayer;
 
-type TwitchPlayerProps = {
-  channel: string,
-  parent: string,
-  width?: string | number,
-  height?: string | number,
-};
-
 export function TwitchPlayer({
   channel,
   parent,
   width = "100%",
   height = 480,
-}: TwitchPlayerProps) {
+}) {
   const src = `https://player.twitch.tv/?channel=${channel}&parent=${parent}`;
 
   return (
