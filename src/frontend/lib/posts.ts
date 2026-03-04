@@ -6,7 +6,7 @@ import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "/posts");
 
-export async function getPost(slug) {
+export async function getPost(slug: string) {
   const filePath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(filePath, "utf8");
 
@@ -16,7 +16,7 @@ export async function getPost(slug) {
 
   return {
     slug,
-    metadata: data,
+    metadata: data as { title: string; author: string; date: string; excerpt: string },
     contentHtml,
   };
 }
@@ -32,7 +32,7 @@ export function getAllPosts() {
 
     return {
       slug,
-      metadata: data,
+      metadata: data as { title: string; author: string; date: string; excerpt: string },
     };
   });
 }

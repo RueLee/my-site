@@ -1,7 +1,15 @@
 import Link from "next/link"
 import Image from "next/image"
 
-const footer_image_link = [
+interface FooterImage {
+  id: number;
+  href: string;
+  src_dark: string;
+  src_light: string;
+  alt: string;
+}
+
+const footer_image_link: FooterImage[] = [
   { id: 1, href: "https://nextjs.org/", src_dark: "/images/nextjs-logotype-dark-background.svg", src_light: "/images/nextjs-logotype-light-background.svg", alt: "Next.js" },
   { id: 2, href: "https://tailwindcss.com/", src_dark: "/images/tailwindcss-logotype-white.svg", src_light: "/images/tailwindcss-logotype.svg", alt: "Tailwind" },
   { id: 3, href: "https://www.djangoproject.com/", src_dark: "/images/django-logo-negative.svg", src_light: "/images/django-logo-positive.svg", alt: "Django" },
@@ -13,7 +21,7 @@ export const Footer = () => {
     <footer aria-label="Footer Label" className="bg-gray-300 dark:bg-gray-700 mt-auto py-4 text-center">
       <p className="text-xl font-bold">Made with</p>
       <div className="flex items-center justify-center my-6 space-x-8">
-      {footer_image_link.map((footer_img) => (
+      {footer_image_link.map((footer_img: FooterImage) => (
         <Link key={footer_img.id} href={footer_img.href} target="_blank" className="relative h-6">
           <Image
             className="hidden dark:block w-auto h-full object-contain"

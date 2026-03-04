@@ -5,7 +5,12 @@ import Link from "next/link"
 
 const li_className = "bg-gray-200 dark:bg-gray-950 p-8 my-8 rounded-xl border-l-4 border-black dark:border-white bg-gradient-to-r from-gray-400 dark:from-gray-700 via-transparent"
 
-function DefaultFormat({ src="", alt, name, role, startdate, enddate="", location="" }) {
+interface DescriptionItem {
+  id: number;
+  comment: string;
+}
+
+function DefaultFormat({ src="", alt, name, role, startdate, enddate="", location="" }: { src?:string, alt:string, name:string, role:string, startdate:string, enddate?:string, location?:string }) {
   return (
     <div className="inline-flex flex-row">
       { src != "" ? <Image src={src} alt={alt} width={80} height={80} className="object-contain" /> : null }
@@ -18,7 +23,7 @@ function DefaultFormat({ src="", alt, name, role, startdate, enddate="", locatio
   )
 }
 
-export function DegreeBox({ src="", alt="", name, degree, startdate, enddate, location="" }) {
+export function DegreeBox({ src="", alt="", name, degree, startdate, enddate, location="" }: { src?:string, alt?:string, name:string, degree:string, startdate:string, enddate:string, location?:string }) {
   return (
     <li className={li_className}>
       <DefaultFormat src={src} alt={alt} name={name} role={degree} startdate={startdate} enddate={enddate} location={location} />
@@ -26,7 +31,7 @@ export function DegreeBox({ src="", alt="", name, degree, startdate, enddate, lo
   );
 }
 
-export function ExperienceBox({ src="", alt="", name, role, startdate, enddate="", location="", descarray, sourcecode="" }) {
+export function ExperienceBox({ src="", alt="", name, role, startdate, enddate="", location="", descarray, sourcecode="" }: { src?:string, alt?:string, name:string, role:string, startdate:string, enddate?:string, location?:string, descarray:Array<DescriptionItem>, sourcecode?:string }) {
   return (
     <li className={li_className}>
       <DefaultFormat src={src} alt={alt} name={name} role={role} startdate={startdate} enddate={enddate} location={location} />
@@ -40,7 +45,7 @@ export function ExperienceBox({ src="", alt="", name, role, startdate, enddate="
   )
 }
 
-export function ProjectBox({ src="", alt="", name, role, startdate, enddate="", location="", descarray, sourcecode="" }) {
+export function ProjectBox({ src="", alt="", name, role, startdate, enddate="", location="", descarray, sourcecode="" }: { src?:string, alt?:string, name:string, role:string, startdate:string, enddate?:string, location?:string, descarray:Array<DescriptionItem>, sourcecode?:string }) {
   return (
     <li className={li_className}>
       <DefaultFormat src={src} alt={alt} name={name} role={role} startdate={startdate} enddate={enddate} location={location} />
@@ -54,7 +59,7 @@ export function ProjectBox({ src="", alt="", name, role, startdate, enddate="", 
   )
 }
 
-export function CertificateBox({ src="", alt="", name, organization, issuedate, link="" }) {
+export function CertificateBox({ src="", alt="", name, organization, issuedate, link="" }: {src?:string, alt?:string, name:string, organization:string, issuedate:string, link?:string }) {
   return (
     <li className={li_className}>
       <div className="inline-flex flex-row">
@@ -125,7 +130,7 @@ export function SkillBox() {
   )
 }
 
-export function AwardBox({ src="", alt="", name, organization, issuedate }) {
+export function AwardBox({ src="", alt="", name, organization, issuedate }: { src?:string, alt?:string, name:string, organization:string, issuedate:string }) {
   return (
     <li className={li_className}>
       <DefaultFormat src={src} alt={alt} name={name} role={organization} startdate={issuedate} />

@@ -6,7 +6,7 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
 
-export function NavBarButton({ href, name }) {
+export function NavBarButton({ href, name }: { href:string, name:string }) {
   return (
     <Link href={href} key={name} className="text-lg mx-2 px-6 py-3 relative rounded-lg group overflow-hidden">
       <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-blue-300 dark:bg-blue-950 group-hover:h-full opacity-90"></span>
