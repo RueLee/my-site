@@ -10,7 +10,7 @@ const footer_image_link = [
 
 export const Footer = () => {
   return (
-    <footer aria-label="Footer Label" className="bg-gray-300 dark:bg-gray-700 mt-auto py-4 text-center">
+    <footer aria-label="Footer Label" className="bg-gray-300 dark:bg-gray-700 mt-auto p-4 text-center">
       <p className="text-xl font-bold">Made with</p>
       <div className="flex items-center justify-center my-6 space-x-8">
       {footer_image_link.map((footer_img) => (
@@ -32,7 +32,7 @@ export const Footer = () => {
         </Link>
       ))}
       </div>
-      <hr className="w-4/6 mx-auto my-4"></hr>
+      <hr className="w-5/6 mx-auto my-4"></hr>
       <p>Copyright © 2026 Ruleon (RueLee) Lee. All Rights Reserved.&emsp;|&emsp;<Link href="https://github.com/RueLee/my-site" target="_blank" className="underline">View Source via GitHub</Link></p>
       
       {/* <p>

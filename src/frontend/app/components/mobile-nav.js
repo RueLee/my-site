@@ -19,7 +19,7 @@ export const MobileNav = () => {
           <FontAwesomeIcon icon={faAlignJustify} />
         </SheetTrigger>
         <SheetContent side="right" className="bg-background text-foreground">
-          <div className="mb-8">
+          <div className="my-8">
             <SocialLinks />
           </div>
           <nav aria-label="Header Mobile Navbar" className="flex flex-col space-y-2">
