@@ -8,6 +8,10 @@
   }
 }
 
+.l-border-list-background {
+  @apply bg-gray-200 dark:bg-gray-950 rounded-xl border-l-4 border-black dark:border-white bg-gradient-to-r from-gray-400 dark:from-gray-700 via-transparent;
+}
+
 .nav-bar-text {
   padding: 10px;
   font-size: 20px;
@@ -46,11 +50,8 @@
 }
 
 .link-hover {
+  @apply hover:underline;
   color: rgb(147 197 253 / var(--tw-text-opacity, 1));
-}
-
-.link-hover:hover {
-  text-decoration: underline;
 }
 
 @custom-variant dark (&:is(.dark *));

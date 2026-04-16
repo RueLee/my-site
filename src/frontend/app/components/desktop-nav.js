@@ -7,6 +7,7 @@ export const DesktopNav = () => {
       <SocialLinks />
       {/* <nav aria-label="Header Navbar"> */}
       <NavBarButton href="/resume" name="Resume" />
+      <NavBarButton href="/freelance" name="Freelance" />
       <NavBarButton href="/twitch" name="Twitch" />
       <NavBarButton href="/support" name="Support" />
       {/* </nav> */}

@@ -6,10 +6,10 @@ import { StreamElementDonateButton } from "../components/custom-button"
 
 function PCSpectacles({ src, alt, productname, storeurl }) {
   return (
-    <li className="flex flex-row items-center bg-gray-200 dark:bg-gray-950 bg-gradient-to-r from-gray-400 dark:from-gray-500 via-transparent rounded-xl border-l-4 border-black dark:border-white m-2">
+    <li className="flex flex-row items-center l-border-list-background m-2">
       <Image src={src} alt={alt} width={100} height={100} className="rounded-l-xl ml-2"/>
       <div className="px-6">
-        <Link href={storeurl} target="_blank" className="text-2xl font-bold hover:underline">{productname}</Link>
+        <Link href={storeurl} target="_blank" className="text-2xl font-bold link-hover">{productname}</Link>
       </div>
     </li>
   )
@@ -17,10 +17,10 @@ function PCSpectacles({ src, alt, productname, storeurl }) {
 
 function Peripherals({ src, alt, productname, storeurl }) {
   return (
-    <li className="flex flex-row items-center bg-gray-200 dark:bg-gray-950 bg-gradient-to-r from-gray-400 dark:from-gray-500 via-transparent rounded-xl border-l-4 border-black dark:border-white m-2">
+    <li className="flex flex-row items-center l-border-list-background m-2">
       <Image src={src} alt={alt} width={100} height={100} className="rounded-l-xl ml-2"/>
       <div className="px-6">
-        <Link href={storeurl} target="_blank" className="text-2xl font-bold hover:underline">{productname}</Link>
+        <Link href={storeurl} target="_blank" className="text-2xl font-bold link-hover">{productname}</Link>
       </div>
     </li>
   )

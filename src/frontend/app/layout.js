@@ -14,7 +14,7 @@ config.autoAddCss = false
 
 export const metadata = {
   title: "Ruleon Ki Lee",
-  description: "Current UC Irvine Student and Computer Science Enthusiast",
+  description: "UC Irvine Graduates - B.S. Computer Science",
 };
 
 export default function RootLayout({ children }) {

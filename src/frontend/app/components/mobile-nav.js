@@ -24,6 +24,7 @@ export const MobileNav = () => {
           </div>
           <nav aria-label="Header Mobile Navbar" className="flex flex-col space-y-2">
             <NavBarButton href="/resume" name="Resume" />
+            <NavBarButton href="/freelance" name="Freelance" />
             <NavBarButton href="/twitch" name="Twitch" />
             <NavBarButton href="/support" name="Support" />
           </nav>
