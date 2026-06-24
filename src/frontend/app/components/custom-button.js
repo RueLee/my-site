@@ -33,7 +33,7 @@ export function StreamElementDonateButton() {
       <Link href="https://streamelements.com/rueleerj/tip" target="_blank" className="transition ease-in-out duration-200 bg-indigo-400 dark:bg-indigo-950 rounded-full hover:bg-indigo-600 dark:hover:bg-indigo-900 px-1 mt-12">
         <div className="flex flex-row items-center justify-center">
           <p className="text-l tracking-wide font-semibold px-12">Donate on StreamElements</p>
-          <Image src="/images/idsvKrMfLn_1734967029149.png" alt="Streamelement logo" width="50" height="50" className="rounded-full" />
+          <Image src="/images/streamelements.ico" alt="Streamelement logo" width="50" height="50" className="rounded-full" />
         </div>
       </Link>
     </div>

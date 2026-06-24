@@ -87,8 +87,8 @@ export default function TwitchPage() {
                 <Peripherals
                   src="https://img.icons8.com/external-febrian-hidayat-outline-color-febrian-hidayat/100/external-Monitor-pc-gaming-febrian-hidayat-outline-color-febrian-hidayat.png"
                   alt="external-Monitor-pc-gaming-febrian-hidayat-outline-color-febrian-hidayat"
-                  productname="BenQ ZOWIE XL2546K (Primary)*"
-                  storeurl="https://www.amazon.com/BenQ-Professional-Gaming-Esport-Monitor/dp/B0CZLCQZXR"
+                  productname="BenQ ZOWIE XL2546X+ (Primary)"
+                  storeurl="https://zowie.benq.com/en-us/monitor/xl2546x-plus.html"
                 />
                 <Peripherals
                   src="https://img.icons8.com/external-febrian-hidayat-outline-color-febrian-hidayat/100/external-Curved-Monitor-pc-gaming-febrian-hidayat-outline-color-febrian-hidayat.png"
@@ -115,7 +115,6 @@ export default function TwitchPage() {
                   storeurl="https://hyperx.com/products/hyperx-cloud-alpha?variant=41031691239581"
                 />
               </ul>
-              <p className="mt-4 italic">* Product Discontinued. Linked to relevant item instead!</p>
             </div>
           </div>
         </div>
