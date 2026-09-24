@@ -2,16 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopesBulk } from "@fortawesome/free-solid-svg-icons";
-import { getAllApiPosts } from "@/lib/api";
+import { getAllPostsFromS3 } from "@/lib/s3";
 
 export default async function Page() {
-  let allPostsData = null;
-  try {
-    allPostsData = await getAllApiPosts();
-  }
-  catch (error) {
-    allPostsData = null;
-  }
+  const allPostsData = await getAllPostsFromS3("posts/");
 
   return (
     <div id="home-page">
@@ -47,7 +41,7 @@ export default async function Page() {
             {allPostsData.map((post) => (
               <li key={post.slug} className="bg-gray-300 dark:bg-gray-900 rounded-xl p-8">
                 <Link href={`/posts/${post.slug}`} className="font-bold text-2xl mx-4 hover:underline">{post.title}</Link>
-                <p className="text-gray-500 mx-4">{post.date_posted}&emsp;○&emsp;{post.author}</p>
+                <p className="text-gray-500 mx-4">{post.date}&emsp;○&emsp;{post.author}</p>
                 <br></br>
                 <hr className="mx-4"></hr>
                 <br></br>
