@@ -8,6 +8,23 @@
   }
 }
 
+h1 {
+  font-size: clamp(1rem, 7.5vw, 3rem);
+  font-weight: bold;
+  @apply my-8;
+}
+
+h2 {
+  font-size: clamp(1rem, 7.5vw, 2.25rem);
+  font-weight: bold;
+  @apply my-8;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .l-border-list-background {
   @apply bg-gray-200 dark:bg-gray-950 rounded-xl border-l-4 border-black dark:border-white bg-gradient-to-r from-gray-400 dark:from-gray-700 via-transparent;
 }

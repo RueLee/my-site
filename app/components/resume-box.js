@@ -8,7 +8,7 @@ function DefaultFormat({ src="", alt, name, role, startdate, enddate="", locatio
     <div className="inline-flex flex-row">
       { src != "" ? <Image src={src} alt={alt} width={80} height={80} className="object-contain" /> : null }
       <div className="ml-8">
-        <h1 className="font-bold text-2xl">{name}</h1>
+        <h3>{name}</h3>
         <p className="font-bold">{role}</p>
         { location != "" ? <p>{location}&emsp;•&emsp;{`${startdate} - ${enddate}`}</p> : enddate != "" ? <p>{`${startdate} - ${enddate}`}</p> : <p>Issued on {startdate}</p> }
       </div>
@@ -58,7 +58,7 @@ export function CertificateBox({ src="", alt="", name, organization, issuedate, 
       <div className="inline-flex flex-row">
         <Image src={src} alt={alt} width={80} height={80} className="object-contain" />
         <div className="ml-8">
-          <h1 className="font-bold text-2xl">{name}</h1>
+          <h3>{name}</h3>
           <p className="font-bold">{organization}</p>
           <p>{issuedate}</p>
           { link != "" ? <Link href={link} target="_blank" className="link-hover">Show Credentials</Link> : null }
@@ -72,7 +72,7 @@ export function SkillBox() {
   return (
     <div className="l-border-list-background p-8">
       <div className="ml-4">
-        <h1 className="font-bold text-2xl">Programming Language</h1>
+        <h3>Programming Language</h3>
         <ul className="list-disc pl-4">
           <li>Python</li>
           <li>C/C++</li>
@@ -85,7 +85,7 @@ export function SkillBox() {
       </div>
       <br></br>
       <div className="ml-4">
-        <h1 className="font-bold text-2xl">Library (Python)</h1>
+        <h3>Library (Python)</h3>
         <ul className="list-disc pl-4">
           <li>NumPy</li>
           <li>Matplotlib</li>
@@ -98,7 +98,7 @@ export function SkillBox() {
       </div>
       <br></br>
       <div className="ml-4">
-        <h1 className="font-bold text-2xl">Framework</h1>
+        <h3>Framework</h3>
         <ul className="list-disc pl-4">
           <li>Next.js</li>
           <li>Tailwind CSS</li>
@@ -108,7 +108,7 @@ export function SkillBox() {
       </div>
       <br></br>
       <div className="ml-4">
-        <h1 className="font-bold text-2xl">Developer Tools</h1>
+        <h3>Developer Tools</h3>
         <ul className="list-disc pl-4">
           <li>Amazon Web Services (AWS)</li>
           <li>Cloudflare</li>

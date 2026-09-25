@@ -19,7 +19,7 @@ export default function ResumePage() {
     <div id="resume-page">
       <section aria-label="Printable Resume">
         <div className="container">
-          <h1 className="text-4xl font-bold mb-8 text-center">Printable Resume</h1>
+          <h2 className="text-center">Printable Resume</h2>
           <div className="flex justify-center">
             <ResumePDFButton />
           </div>
@@ -28,7 +28,7 @@ export default function ResumePage() {
       </section>
       <section aria-label="Education">
         <div className="container">
-          <h1 className="text-4xl font-bold mb-8 text-center">Education</h1>
+          <h2 className="text-center">Education</h2>
           <ul className="space-y-8">
             <DegreeBox src="/images/University_of_California,_Irvine_seal.svg.png" alt="UCI Logo Seal" name="University of California, Irvine" degree="Bachelor of Science, Computer Science" startdate="Sep 2021" enddate="Dec 2025" location="Irvine, CA" />
           </ul>
@@ -36,7 +36,7 @@ export default function ResumePage() {
       </section>
       <section aria-label="Experience">
         <div className="container">
-          <h1 className="text-4xl font-bold mb-8 text-center">Experience</h1>
+          <h2 className="text-center">Experience</h2>
           <ul className="space-y-8">
             <ExperienceBox src="/images/gw1.jpg" alt="Boston Edu Logo" name="Boston Education" role="Software Dev Contractor" startdate="Dec 2023" enddate="Present" location="Los Angeles, CA" descarray={exp_description1} sourcecode="https://github.com/Boston-Education/bosvoiceton-gui" />
           </ul>
@@ -44,7 +44,7 @@ export default function ResumePage() {
       </section>
       <section aria-label="Project">
         <div className="container">
-          <h1 className="text-4xl font-bold mb-8 text-center">Project</h1>
+          <h2 className="text-center">Project</h2>
           <ul className="space-y-8">
             <ProjectBox name="Checkers AI" role="Project Leader" startdate="Feb 2025" enddate="Mar 2025" descarray={proj_description1} />
           </ul>
@@ -52,7 +52,7 @@ export default function ResumePage() {
       </section>
       <section aria-label="Certification">
         <div className="container">
-          <h1 className="text-4xl font-bold mb-8 text-center">Certification</h1>
+          <h2 className="text-center">Certification</h2>
           <ul className="space-y-8">
             <CertificateBox src="/images/coursera-logo-full-rgb.svg" alt="Coursera Logo" name="Generative AI with Large Language Models" organization="Coursera" issuedate="Issued on Aug 2025" link="https://www.coursera.org/account/accomplishments/verify/7VAG0C2IQLY0" />
             <CertificateBox src="/images/coursera-logo-full-rgb.svg" alt="Coursera Logo" name="Supervised Machine Learning: Regression and Classification" organization="Coursera" issuedate="Issued on Sep 2023" link="https://www.coursera.org/account/accomplishments/certificate/UM48QRR89EA9"/>
@@ -62,13 +62,13 @@ export default function ResumePage() {
       </section>
       <section aria-label="Skill">
         <div className="container">
-          <h1 className="text-4xl font-bold mb-8 text-center">Skill</h1>
+          <h2 className="text-center">Skill</h2>
           <SkillBox />
         </div>
       </section>
       <section aria-label="Award">
         <div className="container">
-          <h1 className="text-4xl font-bold mb-8 text-center">Award</h1>
+          <h2 className="text-center">Award</h2>
           <ul className="space-y-8">
             <AwardBox src="/images/Americorps_Stackedlogo_Navy.jpg" alt="AmeriCorps Logo" name="The President's Volunteer Service Award" organization="AmeriCorps" issuedate="Oct 2023" />
           </ul>

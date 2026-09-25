@@ -31,7 +31,7 @@ export default function TwitchPage() {
     <div id="twitch-page">
       <section aria-label="Twitch Page Description">
         <div className="container">
-          <h1 className="text-4xl font-bold mb-8 text-center">Streaming</h1>
+          <h2 className="text-center">Streaming</h2>
           <p className="text-xl text-center">I enjoy streaming! I mainly play games and occassionally some other stuffs during live. Feel free to tune in! :)</p>
         </div>
       </section>
@@ -46,7 +46,7 @@ export default function TwitchPage() {
         <div className="container">
           <div className="flex flex-wrap">
             <div className="col-box-50">
-              <h1 className="text-4xl font-bold my-8 text-center">Current PC Spectacles</h1>
+              <h2 className="text-center">Current PC Spectacles</h2>
               <ul>
                 {/* Image Sources: https://icons8.com/icons/authors/klDPcgJ2LxJD/febrian-hidayat/external-febrian-hidayat-outline-color-febrian-hidayat/external-pc-gaming-febrian-hidayat-outline-color-febrian-hidayat */}
                 <PCSpectacles
@@ -82,7 +82,7 @@ export default function TwitchPage() {
               </ul>
             </div>
             <div className="col-box-50">
-              <h1 className="text-4xl font-bold my-8 text-center">Current Peripherals</h1>
+              <h2 className="text-center">Current Peripherals</h2>
               <ul>
                 <Peripherals
                   src="https://img.icons8.com/external-febrian-hidayat-outline-color-febrian-hidayat/100/external-Monitor-pc-gaming-febrian-hidayat-outline-color-febrian-hidayat.png"

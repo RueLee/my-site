@@ -10,7 +10,7 @@ export default async function BlogPostPage(props) {
   return (
     <div className="container">
       <article className="bg-gray-300 dark:bg-gray-900 rounded-xl p-8">
-        <h1 className="font-bold text-4xl mx-12 mb-4">{metadata.title}</h1>
+        <h2 className="mx-12 mb-4">{metadata.title}</h2>
         <p className="text-gray-500 mx-12">{metadata.date}&emsp;○&emsp;{metadata.author}</p>
         <br></br>
         <hr className="mx-12"></hr>

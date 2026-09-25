@@ -13,7 +13,7 @@ export default async function Page() {
         <div className="container">
           <div className="flex flex-row justify-between">
             <div className="flex flex-col">
-              <h1 className="text-5xl font-bold mb-8">Welcome!</h1>
+              <h1>Welcome!</h1>
               <p className="text-xl">UC Irvine Graduates - B.S. Computer Science</p>
             </div>
             <div className="hero-heading-right">
@@ -32,7 +32,7 @@ export default async function Page() {
       </section>
       <section aria-label="Latest Post Blog">
         <div className="container">
-          <h1 className="text-4xl font-bold mb-8 text-center">Latest Posts</h1>
+          <h2 className="text-center">Latest Posts</h2>
 
           {allPostsData === null ? (
             <p className="text-center text-red-500 text-xl">Failed to fetch data!</p>
@@ -54,7 +54,7 @@ export default async function Page() {
       </section>
       <section aria-label="Email Contact">
         <div className="container bg-gradient-to-r from-blue-500 to-gray-200 dark:from-blue-950 dark:to-gray-950 border-x-4 border-black dark:border-white rounded-xl mb-12">
-          <h1 className="text-5xl font-bold mb-8 text-center">Let&apos;s Connect</h1>
+          <h1 className="text-center">Let&apos;s Connect</h1>
           <p className="text-center m-4">Feel free to reach me out on email! I am open for questions and opportunities!</p>
 
           <div className="flex justify-center">
