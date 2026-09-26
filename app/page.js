@@ -1,17 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
+import { ErrorBoundary } from "react-error-boundary";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopesBulk } from "@fortawesome/free-solid-svg-icons";
 import { getAllPostsFromS3 } from "@/lib/s3";
+import { Spinner } from "./components/ui/spinner";
 
-export default async function Page() {
+export async function PostsData() {
   const allPostsData = await getAllPostsFromS3("posts/");
 
+  return (
+    <div className="space-y-4">
+      {allPostsData.map((post) => (
+        <article key={post.slug} className="bg-gray-300 dark:bg-gray-900 rounded-xl p-8">
+          <Link href={`/posts/${post.slug}`} className="font-bold text-2xl mx-4 hover:underline">{post.title}</Link>
+          <p className="text-gray-500 mx-4">{post.date}&emsp;○&emsp;{post.author}</p>
+          <br></br>
+          <hr className="mx-4"></hr>
+          <br></br>
+          <p className="mx-4">{post.excerpt}</p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+export default function Page() {
   return (
     <div id="home-page">
       <section aria-label="Welcome display">
         <div className="container">
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row items-center justify-between">
             <div className="flex flex-col">
               <h1>Welcome!</h1>
               <p className="text-xl">UC Irvine Graduates - B.S. Computer Science</p>
@@ -34,22 +54,11 @@ export default async function Page() {
         <div className="container">
           <h2 className="text-center">Latest Posts</h2>
 
-          {allPostsData === null ? (
-            <p className="text-center text-red-500 text-xl">Failed to fetch data!</p>
-          ) : (
-            <ul className="space-y-4">
-            {allPostsData.map((post) => (
-              <li key={post.slug} className="bg-gray-300 dark:bg-gray-900 rounded-xl p-8">
-                <Link href={`/posts/${post.slug}`} className="font-bold text-2xl mx-4 hover:underline">{post.title}</Link>
-                <p className="text-gray-500 mx-4">{post.date}&emsp;○&emsp;{post.author}</p>
-                <br></br>
-                <hr className="mx-4"></hr>
-                <br></br>
-                <p className="mx-4">{post.excerpt}</p>
-              </li>
-            ))}
-            </ul>
-          )}
+          <ErrorBoundary fallback={<p className="text-center text-red-500 text-xl">Failed to fetch data!</p>}>
+            <Suspense fallback={<div className="flex justify-center"><Spinner className="size-8 md:size-12" /></div>}>
+              <PostsData />
+            </Suspense>
+          </ErrorBoundary>
         </div>
       </section>
       <section aria-label="Email Contact">
