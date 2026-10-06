@@ -7,8 +7,6 @@ import { faEnvelopesBulk } from "@fortawesome/free-solid-svg-icons";
 import { getAllPostsFromS3 } from "@/lib/s3";
 import { Spinner } from "./components/ui/spinner";
 
-export const dynamic = "force-dynamic";
-
 export async function PostsData() {
   const allPostsData = await getAllPostsFromS3("posts/");
 
