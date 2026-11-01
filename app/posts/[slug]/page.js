@@ -23,7 +23,7 @@ export default async function BlogPostPage(props) {
   return (
     <div className="container">
       <Suspense fallback={<div className="flex justify-center"><Spinner className="size-8 md:size-12" /></div>}>
-        <Post props={props} />
+        <Post params={props.params} />
       </Suspense>
     </div>
   );
