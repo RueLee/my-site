@@ -1,5 +1,7 @@
 import { getPostFromS3 } from "@/lib/s3"
 
+export const revalidate = 240;
+
 export default async function BlogPostPage(props) {
   const { slug } = await props.params;
   const fileKey = `posts/${slug}.md`;
