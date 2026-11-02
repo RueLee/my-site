@@ -9,7 +9,6 @@ const nextConfig = {
       },
     ],
   },
-  cacheComponents: true,
   partialPrefetching: true,
 };
 
