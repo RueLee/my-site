@@ -2,9 +2,7 @@ import { Suspense } from "react";
 import { Spinner } from "../../components/ui/spinner";
 import { getPostFromS3 } from "@/lib/s3"
 
-export const revalidate = 240;
-
-export default async function BlogPostPage(props) {
+export async function Post(props) {
   const { slug } = await props.params;
   const fileKey = `posts/${slug}.md`;
   const { metadata, content } = await getPostFromS3(fileKey);
