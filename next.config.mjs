@@ -9,7 +9,6 @@ const nextConfig = {
       },
     ],
   },
-  partialPrefetching: true,
 };
 
 export default nextConfig;
