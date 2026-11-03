@@ -4,27 +4,8 @@ import { Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopesBulk } from "@fortawesome/free-solid-svg-icons";
-import { getAllPostsFromS3 } from "@/lib/s3";
 import { Spinner } from "./components/ui/spinner";
-
-export async function PostsData() {
-  const allPostsData = await getAllPostsFromS3("posts/");
-
-  return (
-    <div className="space-y-4">
-      {allPostsData.map((post) => (
-        <article key={post.slug} className="bg-gray-300 dark:bg-gray-900 rounded-xl p-8">
-          <Link href={`/posts/${post.slug}`} className="font-bold text-2xl mx-4 hover:underline">{post.title}</Link>
-          <p className="text-gray-500 mx-4">{post.date}&emsp;○&emsp;{post.author}</p>
-          <br></br>
-          <hr className="mx-4"></hr>
-          <br></br>
-          <p className="mx-4">{post.excerpt}</p>
-        </article>
-      ))}
-    </div>
-  );
-}
+import { PostsData } from "./components/posts";
 
 export default function Page() {
   return (
